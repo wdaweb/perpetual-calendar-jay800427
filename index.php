@@ -15,7 +15,7 @@
             width: 50px;
             height: 50px;
             background-color:blue;
-            position: relative;
+            position: absolute;
             box-shadow: 5px 5px 5px #888888;
 
             /* 動畫名子 */
@@ -36,33 +36,33 @@
         @keyframes move{
             0%{
                 left: 0;
-                top: 120px;
+                top: 70px;
                 border-radius: 0;
                 transform: rotate(90deg);
                 background-color:darkorchid;
             }
             25%{
-                left: 475px;
-                top: 120px;
+                left: 25%;
+                top: 70px;
                 border-radius: 25%;
                 background-color:crimson;
             }
             50%{
-                left: 925px;
-                top: 120px;
+                left: 50%;
+                top: 70px;
                 border-radius: 50%;
                 transform: rotate(45deg);
                 background-color:darkcyan;
             }
             75%{
-                left: 1375px;
-                top: 120px;
+                left: 75%;
+                top: 70px;
                 border-radius: 25%;
                 background-color:crimson;
             }
             100%{
-                left: 1825px;
-                top: 120px;
+                left: calc(100% - 50px);
+                top: 70px;
                 border-radius: 0;
                 transform: rotate(0deg);
                 background-color:darkorchid;
@@ -170,11 +170,11 @@ if(!empty($_GET['month'])){
 <?php
     if(($month-1)>0){
         ?>
-        <a href="homework.php?month=<?=($month-1);?>&&year=<?=($year);?>"><img src="01.jpg"width="50" height="50"></a>         
+        <a href="?month=<?=($month-1);?>&&year=<?=($year);?>"><img src="01.jpg"width="50" height="50"></a>         
         <?php
     }else{
         ?>
-        <a href="homework.php?month=12&&year=<?=($year-1);?>"><img src="01.jpg"width="50" height="50"></a>            
+        <a href="?month=12&&year=<?=($year-1);?>"><img src="01.jpg"width="50" height="50"></a>            
         <?php
     }
         ?>
@@ -182,11 +182,11 @@ if(!empty($_GET['month'])){
     <?php
     if(($month+1)<=12){
     ?>
-    <a href="homework.php?month=<?=($month+1);?>&&year=<?=($year);?>"><img src="02.jpg"width="50" height="50"></a>
+    <a href="?month=<?=($month+1);?>&&year=<?=($year);?>"><img src="02.jpg"width="50" height="50"></a>
     <?php
     }else{
     ?>
-    <a href="homework.php?month=1&&year=<?=($year+1);?>"><img src="02.jpg"width="50" height="50"></a>   
+    <a href="?month=1&&year=<?=($year+1);?>"><img src="02.jpg"width="50" height="50"></a>   
     <?php
         }
     ?>
